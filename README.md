@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏨 HostelHub – Hostel Room Allocation DApp
 
 ## 📌 About
@@ -47,3 +48,7 @@ HostelHub is a blockchain-based DApp for managing hostel room availability, book
 
 Third-Year B.Tech Student  
 Computer Science and Engineering (IoT, Cyber Security and Blockchain Technology)
+=======
+# smBlockchain
+A blockchain-based Hostel Room Allocation DApp using Solidity smart contracts, Ganache, HTML, CSS, JavaScript, and ethers.js to manage room availability and booking.
+>>>>>>> 8d3b45245369e5cecf02c8b937ad73c616dd3519
