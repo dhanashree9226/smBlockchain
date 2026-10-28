@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HostelHub | Room Allocation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.5/ethers.umd.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">H</div>
+    <div>
+      <h1>Hostel<span>Hub</span></h1>
+      <p>BLOCKCHAIN HOSTEL MANAGEMENT</p>
+    </div>
+    <span class="network">● Ganache Network</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">ROOM ALLOCATION PORTAL</p>
+        <h2>A smarter way to<br><span>find your room.</span></h2>
+        <p class="description">
+          Check room availability and book your hostel room using blockchain.
+        </p>
+        <button id="connectBtn" class="primary">Connect Ganache Account</button>
+        <p id="connectionStatus" class="status">Not connected.</p>
+      </div>
+      <div class="hero-icon">⌂</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <p>Total Rooms</p>
+        <h2 id="totalRooms">—</h2>
+      </div>
+      <div class="stat">
+        <p>Available Rooms</p>
+        <h2 id="availableRooms">—</h2>
+      </div>
+      <div class="stat">
+        <p>Booked Rooms</p>
+        <h2 id="bookedRooms">—</h2>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">LIVE ROOM STATUS</p>
+          <h2>Hostel Rooms</h2>
+        </div>
+        <button id="refreshBtn" class="secondary">Refresh</button>
+      </div>
+      <div id="roomsGrid" class="rooms-grid">
+        <p class="empty">Connect to Ganache to view rooms.</p>
+      </div>
+    </section>
+
+    <section class="two-columns">
+      <div class="panel">
+        <p class="eyebrow">STUDENT DASHBOARD</p>
+        <h2>Your Allocation</h2>
+        <div class="allocation">
+          <div class="room-symbol">⌂</div>
+          <div>
+            <p>Assigned Room</p>
+            <h3 id="myRoom">Not checked</h3>
+          </div>
+        </div>
+        <p id="myRoomStatus" class="muted">
+          Connect your account to check your room.
+        </p>
+        <button id="checkMyRoomBtn" class="secondary">Check My Room</button>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">ADMIN TOOLS</p>
+        <h2>Add a Room</h2>
+        <p class="muted">Only the contract admin can add rooms.</p>
+        <form id="addRoomForm">
+          <label for="roomNumber">Room Number</label>
+          <div class="input-row">
+            <input id="roomNumber" type="number" min="1"
+                   placeholder="Example: 102" required>
+            <button type="submit" class="primary">Add Room</button>
+          </div>
+        </form>
+        <p id="adminStatus" class="status"></p>
+      </div>
+    </section>
+
+    <footer>
+      HostelHub · Hostel Room Allocation DApp · Ganache Local Demo
+    </footer>
+  </main>
+</body>
+</html>
